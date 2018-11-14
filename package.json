@@ -1,0 +1,27 @@
+{
+  "name": "eslint-plugin-disallow-literals-as-jsxelement-children",
+  "version": "0.0.1",
+  "description": "Disallow string literals as direct JSXElement children",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "Grzegorz Dominiczak",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "~3.9.1",
+    "mocha": "^3.1.2",
+    "prettier": "^1.15.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC"
+}
