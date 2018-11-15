@@ -27,7 +27,10 @@ ruleTester.run(
   'eslint-plugin-disallow-literals-as-direct-jsxelement-children',
   rule,
   {
-    valid: ["<MyComponent>{trans('foo')}</MyComponent>"],
+    valid: [
+      "<MyComponent>{trans('foo')}</MyComponent>",
+      "<MyComponent>{trans('foo')}.</MyComponent>"
+    ],
 
     invalid: [
       {
