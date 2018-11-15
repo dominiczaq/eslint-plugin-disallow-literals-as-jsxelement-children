@@ -29,7 +29,8 @@ ruleTester.run(
   {
     valid: [
       "<MyComponent>{trans('foo')}</MyComponent>",
-      "<MyComponent>{trans('foo')}.</MyComponent>"
+      "<MyComponent>{trans('foo')}.</MyComponent>",
+      '<MyComponent>2.0</MyComponent>'
     ],
 
     invalid: [
@@ -39,6 +40,36 @@ ruleTester.run(
           {
             message:
               'Unexpected literal used as direct child of JSXElement - Foo',
+            type: 'Literal'
+          }
+        ]
+      },
+      {
+        code: '<MyComponent>Foo Bar Baz</MyComponent>',
+        errors: [
+          {
+            message:
+              'Unexpected literal used as direct child of JSXElement - Foo Bar Baz',
+            type: 'Literal'
+          }
+        ]
+      },
+      {
+        code: '<MyComponent>Foo Bar Baz!</MyComponent>',
+        errors: [
+          {
+            message:
+              'Unexpected literal used as direct child of JSXElement - Foo Bar Baz!',
+            type: 'Literal'
+          }
+        ]
+      },
+      {
+        code: '<MyComponent>Foo Bar Baz! 2.0</MyComponent>',
+        errors: [
+          {
+            message:
+              'Unexpected literal used as direct child of JSXElement - Foo Bar Baz! 2.0',
             type: 'Literal'
           }
         ]
