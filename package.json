@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-disallow-literals-as-jsxelement-children",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Disallow string literals as direct JSXElement children",
   "keywords": [
     "eslint",
