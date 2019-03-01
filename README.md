@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This is no longer supported, rule included in this plugin is now under https://github.com/dominiczaq/eslint-plugin-tidio-additional-rules
+
 # eslint-plugin-disallow-literals-as-jsxelement-children
 
 Disallow string literals as direct JSXElement children
